@@ -6,5 +6,4 @@ myModule.controller("angularCtrl",['$scope',
 			text:'你好'
 		} 
 	}
-
 ]);
