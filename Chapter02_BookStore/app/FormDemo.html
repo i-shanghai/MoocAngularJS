@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Two Way Binding</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="framework/bootstrap-4.0.0/css/bootstrap.min.css">
+    <script type="text/javascript" src="framework/angularjs/angular.min.js"></script>
+    <script type="text/javascript" src="js/formDemo.js"></script>
+</head>
+
+<body ng-app="userInfoModule">
+    <div class="container">
+        <form class="form-horizontal" ng-controller="userInfoCtrl">
+            <div class="form-group">
+                <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+                <div class="col-sm-10">
+                    <input type="email" class="form-control" id="inputEmail3" placeholder="Email" ng-model="userInfo.email">
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+                <div class="col-sm-10">
+                    <input type="password" class="form-control" id="inputPassword3" placeholder="Password" ng-model="userInfo.password">
+                </div>
+            </div>
+            <div class="form-group">
+            	<div class="col-sm-offset-2 col-sm-10">
+            		<div class="checkbox">
+            			<label for="">
+            				<input type="checkbox" ng-model="userInfo.autoLogin">
+            			</label>
+            		</div>
+            	</div>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label>
+                            <input type="checkbox" ng-model="userInfo.autoLogin"> Remember me
+                        </label>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button type="submit" class="btn btn-default">Sign in</button>
+                </div>
+            </div>
+            <div class="col-md-offset-2 col-md-10">
+            	<button class="btn btn-primary" ng-click="getUserData()">获取Form表单数据</button>
+            </div>
+        </form>
+    </div>
+</body>
+
+</html>

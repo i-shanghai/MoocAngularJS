@@ -13,7 +13,7 @@
 <body ng-app="angularModule">
     <div ng-controller="angularCtrl">
         <input type="text" name="" ng-model="greeting.text">
-        <p>{{greeting.text}},AngularJS</p>
+        <p><span ng-bind="greeting.text"></span>,AngularJS</p>
         <div>
             <ol ng-repeat="name in names">
                 <li>{{name}}</li>

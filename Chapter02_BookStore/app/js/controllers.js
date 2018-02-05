@@ -4,7 +4,7 @@ var bookStoreCtrls=angular.module('bookStoreCtrls',[]);
 bookStoreCtrls.controller('HelloCtrl',['$scope',
 	function($scope){
 		$scope.greeting={
-			text:'Hello'
+			text:'Hello '
 		};
 	}
 ]);
