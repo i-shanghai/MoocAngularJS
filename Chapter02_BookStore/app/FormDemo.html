@@ -25,13 +25,13 @@
                 </div>
             </div>
             <div class="form-group">
-            	<div class="col-sm-offset-2 col-sm-10">
-            		<div class="checkbox">
-            			<label for="">
-            				<input type="checkbox" ng-model="userInfo.autoLogin">
-            			</label>
-            		</div>
-            	</div>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <div class="checkbox">
+                        <label for="">
+                            <input type="checkbox" ng-model="userInfo.autoLogin">
+                        </label>
+                    </div>
+                </div>
                 <div class="col-sm-offset-2 col-sm-10">
                     <div class="checkbox">
                         <label>
@@ -46,10 +46,53 @@
                 </div>
             </div>
             <div class="col-md-offset-2 col-md-10">
-            	<button class="btn btn-primary" ng-click="getUserData()">获取Form表单数据</button>
+                <button class="btn btn-primary" ng-click="getUserData()">获取Form表单数据</button>
+                <button class="btn btn-primary" ng-click="setUserData()">更新Form表单数据</button>
             </div>
+            <hr>
+            <div class="form-group">
+                <div class="col-sm-offset-2 col-sm-10">
+                    按钮样式：
+                    <label ng-bind="btnStyle"></label>
+                </div>
+                <div class="col-sm-offset-2 col-sm-10">
+                    <button class="btn btn-{{btnStyle}}">颜色变化</button>
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <button class="btn btn-default" ng-click="setBtnStyle()">设置按钮样式</button>
+                </div>
+                <hr>
+                <div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        NG-Class控制样式：
+                    </div>
+                    <div class="col-sm-offset-2 col-sm-10">
+                        <p ng-class="{'bg-primary':isPrimary,'bg-info':isInfo,'bg-danger':isDanger}">NG-Class颜色变化</p>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button class="btn btn-default" ng-click="setNgClass()">Primary</button>
+                        <button class="btn btn-default" ng-click="setNgClassInfo()">Info</button>
+                        <button class="btn btn-default" ng-click="setNgClassDanger()">danger</button>
+                    </div>
+                </div>
+                <hr>
+				<div class="form-group">
+                    <div class="col-sm-offset-2 col-sm-10">
+                        NG-Hide控制显示隐藏：<h3 ng-show="menuState.show">你好啊，HELLO HELLO</h3> 
+                    </div>
+                    
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <button class="btn btn-default" ng-click="toggleMenu()">toggleMenu</button> 
+                    </div>
+                </div>
         </form>
-    </div>
+        </div>
 </body>
 
 </html>

@@ -6,6 +6,8 @@ bookStoreCtrls.controller('HelloCtrl',['$scope',
 		$scope.greeting={
 			text:'Hello '
 		};
+
+		$scope.pageClass="hello";
 	}
 ]);
 
@@ -16,5 +18,8 @@ bookStoreCtrls.controller('BookListCtrl',['$scope',
 			{title:'《深入理解C#》',author:'James'},
 			{title:'《设计模式》',author:'James'}
 		];
+
+		$scope.pageClass="list";
 	}
 ]);
+
